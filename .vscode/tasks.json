@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "group": "build",
+            "command": "gcc",
+            "args": [
+                "${workspaceFolder}\\src\\*.c",
+                "-o",
+                "${workspaceFolder}\\bin\\main.exe",
+                "-I'${workspaceFolder}\\include'",
+                "-L'${workspaceFolder}\\libs'",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
